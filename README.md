@@ -1,0 +1,3 @@
+# Lua pairs iterator unexpected behavior
+
+This repository demonstrates a potential issue with Lua's `pairs` iterator when dealing with tables that are modified during iteration.  The provided `bug.lua` file contains a function that recursively iterates through a nested table.  However, if the table structure is modified during iteration (e.g., by adding or removing elements), the `pairs` iterator's behavior can become unpredictable, potentially skipping elements or even causing an infinite loop.  The `bugSolution.lua` file shows how to mitigate the problem by creating a copy of the table before iterating, thus avoiding in-place modifications during iteration.
